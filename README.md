@@ -31,6 +31,7 @@ copy[Copy Password to Clipboard]
 save[Save Functionality Setup]
 warning[Warning Prompt: Empty Website Name Field]
 error[Error Prompt: Empty Password Field]
+save_button[Save Button Prompt: Asks user Whether Info Is Correct]
 save_pass[Save Password to Data File]
 finish(((END)))
 start --> ui_setup
@@ -44,7 +45,8 @@ create_pass --> copy
 start --> save
 save --> warning
 warning --> error
-error --> save_pass
+error --> save_button
+save_button --> save_pass
 buttons --> finish
 copy --> finish
 save_pass --> finish
