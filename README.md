@@ -16,7 +16,7 @@ The password generator would create a strong password with 8 of each character t
 
 ![image](https://github.com/frantzalexander/password_manager_gui/assets/128331579/4b4575c1-1ad5-4b90-90bd-592b09becad7)
 
-## 
+## Process
 ```mermaid
 flowchart TD
 start(((START)))
