@@ -29,10 +29,14 @@ import[Import data from Text Entry Fields]
 create_pass[Create password]
 copy[Copy Password to Clipboard]
 save[Save Functionality Setup]
-warning[Warning Prompt: Empty Website Name Field]
-error[Error Prompt: Empty Password Field]
-save_button[Save Button Prompt: Asks user Whether Info Is Correct]
+check{Check Text Fields: Website & Password}
+warning[Warning Prompt]
+error[Error Prompt]
 save_pass[Save Password to Data File]
+search[Search Functionality Setup]
+check2{Check: Website Name Field}
+warning2[Warning Prompt]
+info[Info Prompt: Email & Password]
 finish(((END)))
 start --> ui_setup
 ui_setup --> labels
@@ -43,10 +47,15 @@ password --> import
 import --> create_pass
 create_pass --> copy
 start --> save
-save --> warning
-warning --> error
-error --> save_button
-save_button --> save_pass
+save --> check
+check -->|Website Field Empty|warning
+check -->|Password Field Empty|error
+check -->|No Errors| save_pass
+start --> search
+search --> check2
+check2 -->|Empty Field|warning2
+check2 -->|No Errors|info
+info --> finish
 buttons --> finish
 copy --> finish
 save_pass --> finish
