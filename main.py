@@ -110,7 +110,7 @@ def search_entry():
                 website_password_contents = contents[website_name_entry]
             
             except KeyError:
-                messagebox.showerror(title = "Error", message = "Website entry not found.")
+                messagebox.showerror(title = "Error", message = f"No details for {website_name_entry} were found.")
             
             else:
                 email = website_password_contents['email']
