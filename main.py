@@ -62,10 +62,10 @@ def save_entry():
     }}
     
     if len(website_entry) == 0:
-        messagebox.showwarning("Warning", "The website text field is empty.")
+        messagebox.showwarning(title = "Warning", message = "The website text field is empty.")
         
     elif len(password_entry) == 0:
-        messagebox.showerror("Error", "The password text field is empty.")
+        messagebox.showerror(title = "Error", message = "The password text field is empty.")
     
     else:
         try:
@@ -95,7 +95,7 @@ def search_entry():
     website_name_entry = website_text.get().title()
     
     if len(website_name_entry) == 0:
-        messagebox.showerror("Error","The website name field is empty")
+        messagebox.showerror(title = "Error", message = "The website name field is empty")
     
     else:
         try:
@@ -103,17 +103,21 @@ def search_entry():
                 contents = json.load(data_file)
             
         except FileNotFoundError:
-            messagebox.showwarning("Warning","Create & save a password first.")
+            messagebox.showwarning(title = "Warning", message= "Create & save a password first.")
         
         else:
             try:
                 website_password_contents = contents[website_name_entry]
             
             except KeyError:
-                messagebox.showerror("Error","Website entry not found.")
+                messagebox.showerror(title = "Error", message = "Website entry not found.")
             
             else:
-                messagebox.showinfo("Information", f"Email: {website_password_contents['email']}\nPassword: {website_password_contents['password']}")
+                email = website_password_contents['email']
+                password = website_password_contents['password']
+                messagebox.showinfo(
+                    title = "Info", 
+                    message = f"Email: {email}\nPassword: {password}")
 
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
