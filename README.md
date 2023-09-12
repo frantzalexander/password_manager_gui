@@ -7,6 +7,7 @@ The Password Manager Graphic User Interface is to provide the user with strong a
 - Create a Simple GUI.
 - Generate Complex & Unique Passwords.
 - Create Password Storage Functionality
+- Method for Password Retrieval
 
 ## Results
 Should the fields for the number of letters, digits and symbols are empty. 
