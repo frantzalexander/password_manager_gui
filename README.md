@@ -15,7 +15,8 @@ Should the fields for the number of letters, digits and symbols are empty.
 
 The password generator would automatically create a strong password with 8 of each character type. 
 
-![image](https://github.com/frantzalexander/password_manager_gui/assets/128331579/4b4575c1-1ad5-4b90-90bd-592b09becad7)
+![image](https://github.com/frantzalexander/password_manager_gui/assets/128331579/168cc7a2-271e-4930-83fe-462671e235d6)
+
 
 ## Process
 ```mermaid
